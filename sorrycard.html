@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>I’m Sorry My Love 💔</title>
   <style>
     body {
@@ -18,18 +18,15 @@
       align-items: center;
       overflow: hidden;
     }
-
     h1 {
       font-size: 2.5rem;
       animation: fadeIn 2s ease-in-out;
     }
-
     p {
       font-size: 1.2rem;
       margin-top: 15px;
       animation: fadeIn 3s ease-in-out;
     }
-
     button {
       background-color: #fff;
       color: #ee5a5a;
@@ -41,32 +38,26 @@
       cursor: pointer;
       transition: all 0.3s;
     }
-
     button:hover {
       transform: scale(1.1);
       background-color: #ffe3e3;
     }
-
     .hidden {
       display: none;
     }
-
     #emoji {
       font-size: 4rem;
       margin-bottom: 20px;
       animation: bounce 1.5s infinite;
     }
-
     @keyframes bounce {
       0%, 100% { transform: translateY(0); }
       50% { transform: translateY(-10px); }
     }
-
     @keyframes fadeIn {
       from { opacity: 0; }
       to { opacity: 1; }
     }
-
     #music-icon {
       position: fixed;
       bottom: 15px;
@@ -80,7 +71,6 @@
       display: none;
       box-shadow: 0 0 10px rgba(0,0,0,0.2);
     }
-
     #ending {
       animation: fadeIn 2s ease-in-out;
     }
@@ -110,7 +100,8 @@
 
   <div id="music-icon">🔊</div>
 
-  <audio id="bg-audio" src="https://raw.githubusercontent.com/Ss0786/music/main/For%20A%20Reason.mp3" preload="auto" loop></audio>
+  <!-- 🎵 Background music -->
+  <audio id="bg-audio" src="https://github.com/Ss0786/music/raw/main/For%20A%20Reason.mp3" preload="auto" loop></audio>
 
   <script>
     const okBtn = document.getElementById('okBtn');
@@ -120,13 +111,12 @@
     const emoji = document.getElementById('emoji');
     const musicIcon = document.getElementById('music-icon');
     const audio = document.getElementById('bg-audio');
-
     let noClickCount = 0;
 
     // Try autoplay music after 2 seconds
     setTimeout(() => {
       audio.play().catch(() => {
-        musicIcon.style.display = 'block'; // show icon if autoplay blocked
+        musicIcon.style.display = 'block';
       });
     }, 2000);
 
